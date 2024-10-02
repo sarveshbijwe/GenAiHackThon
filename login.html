@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Learning Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="login(); return false;">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username" value="std1" readonly required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" value="pass123" readonly required>
+
+            <div>
+                <label><input type="radio" name="role" value="Student" checked onclick="setLoginDetails('Student')"> Student</label>
+                <label><input type="radio" name="role" value="Teacher" onclick="setLoginDetails('Teacher')"> Teacher</label>
+            </div>
+
+            <button type="submit">Login</button>
+            <div id="error-message" class="error"></div>
+            <div class="loading-spinner" id="loading-spinner"></div>
+        </form>
+
+        <a href="create_acc.html" class="create-account">Don't have an account? Create a new account here.</a>
+    </div>
+
+    <script>
+        // Dummy users array for testing
+        const users = [
+            { username: 'std1', password: 'pass123', role: 'Student' },
+            { username: 'teacher1', password: 'pass789', role: 'Teacher' },
+        ];
+
+        // Function to set login details based on selected role
+        function setLoginDetails(role) {
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+
+            if (role === 'Student') {
+                usernameInput.value = 'std1';
+                passwordInput.value = 'pass123';
+            } else if (role === 'Teacher') {
+                usernameInput.value = 'teacher1';
+                passwordInput.value = 'pass789';
+            }
+        }
+
+        function login() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const role = document.querySelector('input[name="role"]:checked').value;
+            const errorMessage = document.getElementById('error-message');
+            const loadingSpinner = document.getElementById('loading-spinner');
+
+            // Show loading spinner
+            loadingSpinner.style.display = 'block';
+            errorMessage.textContent = ''; // Clear any previous error messages
+
+            // Simulate a network request with setTimeout
+            setTimeout(() => {
+                // Find the user based on username, password, and role
+                const user = users.find(user => user.username === username && user.password === password && user.role === role);
+
+                // Hide loading spinner
+                loadingSpinner.style.display = 'none';
+
+                if (user) {
+                    // Redirect based on the role
+                    if (role === 'Student') {
+                        window.location.href = 'sd.html';
+                    } else if (role === 'Teacher') {
+                        window.location.href = 'td.html';
+                    }
+                } else {
+                    // Show error message if login fails
+                    errorMessage.textContent = 'Invalid username, password, or role. Please try again.';
+                }
+            }, 1000); // Simulate a 1 second delay for the login process
+        }
+    </script>
+
+</body>
+</html>

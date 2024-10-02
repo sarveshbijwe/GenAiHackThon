@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI-Powered Learning Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff); /* Updated gradient */
+            color: white;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 250px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            height: 100%;
+        }
+        .sidebar h2 {
+            font-family: 'Oswald', sans-serif; /* Bold font style */
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            width: calc(100% - 250px);
+            overflow-y: auto; /* Allow scrolling */
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        h1 {
+            font-size: 48px;
+            font-family: 'Oswald', sans-serif; /* Bold font style */
+            animation: fadeIn 1s;
+        }
+        .box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            animation: fadeIn 1.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        img {
+            width: 100%; /* Responsive images */
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Menu</h3>
+
+        <a href="try5.html" style="font-weight: bold; background-color: rgb(222, 194, 66); padding: 5px;">AI Teacher</a>
+
+        <a href="login.html" style="font-weight: bold; background-color: rgb(164, 134, 237); padding: 5px;"> <strong>Login</strong> </a>
+
+
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        
+        <a href="settings.html">Settings</a>
+        <a href="index.html">Sign Out</a>
+    </div>
+
+    <div class="content">
+        <div class="logo">
+            <img src="your-logo.png" alt="Logo" width="100"> <!-- Replace with your logo image -->
+        </div>
+        <h1>Welcome to Your AI-Powered Learning Companion!</h1>
+        <img src="https://superteacher.in/public/course_image/iStock-985032688.jpg" alt="Learning Hero Image"> 
+        <p class="box">Transforming Learning, One Student at a Time.</p>
+
+        <div class="box">
+            <h2 style="font-family: 'Oswald', sans-serif;">Why Choose Us?</h2>
+            <img src="https://asapsystems.com/wp-content/uploads/2024/04/why-choose-barcloud.png" alt="Why Choose Us"> 
+            <ul>
+                <li><strong>Personalized Learning Paths:</strong> Tailored content based on your unique learning style and pace.</li>
+                <li><strong>Interactive Learning Modules:</strong> Engage with interactive exercises and quizzes that make learning fun and effective.</li>
+                <li><strong>Instant Feedback:</strong> Receive real-time insights and tips to enhance your understanding and skills.</li>
+                <li><strong>Multidisciplinary Support:</strong> Explore a wide range of subjects, from math and science to languages and the arts.</li>
+                <li><strong>24/7 Availability:</strong> Learn anytime, anywhere, with round-the-clock access to your learning companion.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2 style="font-family: 'Oswald', sans-serif;">How It Works</h2>
+            <img src="https://www.techqura.com/images/how.png" alt="How It Works"> 
+            <ol>
+                <li><strong>Sign Up:</strong> Create your personalized profile.</li>
+                <li><strong>Assess Your Needs:</strong> Take a quick assessment to determine your learning style.</li>
+                <li><strong>Start Learning:</strong> Dive into customized lessons and activities tailored just for you.</li>
+            </ol>
+        </div>
+
+        <div class="box">
+            <h2 style="font-family: 'Oswald', sans-serif;">What Our Users Are Saying:</h2>
+            <blockquote>
+                “This companion has transformed my study habits! I feel more engaged than ever.” - *Student A*
+            </blockquote>
+            <blockquote>
+                “I love the personalized quizzes! They really help me focus on what I need to improve.” - *Student B*
+            </blockquote>
+        </div>
+
+        <div class="box">
+            <h2 style="font-family: 'Oswald', sans-serif;">Get Started Today!</h2>
+            <p>Ready to embark on your learning journey? <a href="signup.html" style="color: #ffdd57; font-weight: bold;">Sign Up Now</a></p>
+        </div>
+    </div>
+</body>
+</html>
