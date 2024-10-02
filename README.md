@@ -1,6 +1,7 @@
 # GenAi Hackthon
 
 This project is a web-based platform for **Gemini-powered AI Learning Companion**. 
+Gemini-Powered AI Learning Companion: An intelligent, personalized learning assistant that leverages advanced AI to create tailored study plans, dynamic content, and interactive support across various subjects. Ideal for enhancing student engagement and performance through a gamified and adaptive learning experience.
 
 ## 🌐 Live Demo
 
